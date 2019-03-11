@@ -1,5 +1,5 @@
 # iot-Semester2
-will be adding the rest api and arest library to this hopfulley more infomation at https://arest.io/.
+will be adding the rest api and arest library to this hopfulley and more infomation at https://arest.io/.
 
 
 
