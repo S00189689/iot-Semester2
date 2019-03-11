@@ -18,7 +18,7 @@ const int buttonPin = 6;     // the number of the pushbutton pin
 
 
 #include <CheapStepper.h>
-
+//#include <Arest.>
 
 CheapStepper stepper;
 // here we declare our stepper using default pins:
@@ -143,7 +143,3 @@ if (buttonState == HIGH)
   */
 }
 }
-
-
-
-
