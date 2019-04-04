@@ -1,4 +1,4 @@
-#include <Blynk.h>
+
 #include <Bridge.h>
 #include <CheapStepper.h>
 #include <BlynkSimpleYun.h>
@@ -24,30 +24,41 @@ const int buttonPin = 6;   // the number of the pushbutton pin
 const int appButton = 7;   // the number of the pushbutton pin
 int buttonState = 0;
 int appButtonState = 0;      
-// let's create a boolean variable to save the direction of our rotation
-boolean moveClockwise = true;
+boolean moveClockwise;
 char auth[] = "3036ca303403434497f1fd84659ca559";
-int steps = 2048;
+int steps = 512;
 
 void setup() {
   pinMode(buttonPin, INPUT);
   Serial.begin(9600);
-  Blynk.begin(auth);
+  //Blynk.begin(auth);
   //Serial.println("Ready to start moving!");
 }
 
 void loop() {
-  Blynk.run();
+  //Blynk.run();
   // read the state of the buttons value:
   buttonState = digitalRead(buttonPin);
-  appButtonState = digitalRead(appButton);
-  moveClockwise = true;
+  //appButtonState = digitalRead(appButton);
   // if btn is high open and close 
-  if (buttonState == HIGH || appButtonState == HIGH)
+  if (buttonState == HIGH )
     {
-      // open CW
-      for (int s=0; s<steps; s++){
-        stepper.step(moveClockwise);
+      moveClockwise= false;
+      TurnStepper(moveClockwise);
+      moveClockwise = !moveClockwise;
+      delay(75) ;
+      TurnStepper(moveClockwise);
+  }// end if button is btn high
+  delay(100);
+}// end loop
+
+
+
+
+void TurnStepper(bool turnDirection){
+
+  for (int s=0; s<steps; s++){
+        stepper.step(turnDirection);
         int nStep = stepper.getStep();
         if (nStep%64==0){ 
           // let's print the position to the console
@@ -55,20 +66,4 @@ void loop() {
           Serial.println();
         }//end if
       }//end for
-      // let's wait one second
-      delay(500) ;
-      // and switch directions before  closing
-      moveClockwise = !moveClockwise;
-      // close CCW
-      for (int s=0; s<steps; s++){
-        stepper.step(moveClockwise);
-        int nStep = stepper.getStep();
-        if (nStep%64==0){ 
-          // let's print the position to the console
-          Serial.print("current step position: "); Serial.print(nStep);
-          Serial.println();
-          }// end if 
-        }//end for close
-  }// end if button is btn high
-  delay(500);
-}// end loop
+}

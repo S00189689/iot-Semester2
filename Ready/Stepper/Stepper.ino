@@ -1,4 +1,4 @@
-#include <Blynk.h>
+//#include <Blynk.h>
 #include <Bridge.h>
 #include <CheapStepper.h>
 #include <BlynkSimpleYun.h>
@@ -25,7 +25,7 @@ const int appButton = 7;   // the number of the pushbutton pin
 int buttonState = 0;
 int appButtonState = 0;      
 // let's create a boolean variable to save the direction of our rotation
-boolean moveClockwise = true;
+boolean moveClockwise;
 char auth[] = "3036ca303403434497f1fd84659ca559";
 int steps = 512;
 
