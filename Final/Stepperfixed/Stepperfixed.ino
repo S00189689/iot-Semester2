@@ -1,15 +1,13 @@
-
 #include <Bridge.h>
 #include <CheapStepper.h>
 #include <BlynkSimpleYun.h>
 /*
- * cheapStepper_simple.ino
  * ///////////////////////////////////////////
  * using CheapStepper Arduino library v.0.2.0
  * created by Tyler Henry, 7/2016
  * ///////////////////////////////////////////
+ * ## NOTE !! ## uncomment lins (31,35,38 and 40(inline)) to use it with blynk. ##
  */
-
 
 CheapStepper stepper;
 // here we declare our stepper using default pins:
@@ -21,18 +19,16 @@ CheapStepper stepper;
 
 // variable for reading the pushbutton status
 const int buttonPin = 6;   // the number of the pushbutton pin
-const int appButton = 7;   // the number of the pushbutton pin
+const int appButton = 7;   // the number of the pushbutton on the App
 int buttonState = 0;
 int appButtonState = 0;      
-boolean moveClockwise;
-char auth[] = "3036ca303403434497f1fd84659ca559";
-int steps = 512;
+boolean moveClockwise; // to control the turn direction 
+char auth[] = "3036ca303403434497f1fd84659ca559"; // used for the blynk app
+int steps = 512; // stepps to open and close the flopper
 
 void setup() {
   pinMode(buttonPin, INPUT);
-  Serial.begin(9600);
   //Blynk.begin(auth);
-  //Serial.println("Ready to start moving!");
 }
 
 void loop() {
@@ -41,13 +37,12 @@ void loop() {
   buttonState = digitalRead(buttonPin);
   //appButtonState = digitalRead(appButton);
   // if btn is high open and close 
-  if (buttonState == HIGH )
+  if (buttonState == HIGH /*|| appButtonState == HIGH*/)
     {
       moveClockwise= false;
       TurnStepper(moveClockwise);
-      moveClockwise = !moveClockwise;
       delay(75) ;
-      TurnStepper(moveClockwise);
+      TurnStepper(!moveClockwise);
   }// end if button is btn high
   delay(100);
 }// end loop
@@ -56,14 +51,7 @@ void loop() {
 
 
 void TurnStepper(bool turnDirection){
-
   for (int s=0; s<steps; s++){
         stepper.step(turnDirection);
-        int nStep = stepper.getStep();
-        if (nStep%64==0){ 
-          // let's print the position to the console
-          Serial.print("current step position: "); Serial.print(nStep);
-          Serial.println();
-        }//end if
-      }//end for
+      }
 }
