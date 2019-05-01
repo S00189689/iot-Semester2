@@ -6,6 +6,11 @@
  * using CheapStepper Arduino library v.0.2.0
  * created by Tyler Henry, 7/2016
  * ///////////////////////////////////////////
+ * Modfied by David Gordon,Jonatan Opitek and Mohamad Shiha  
+ * for the IoT Project 
+ * //////////////////////////////////////////
+ * 
+ * 
  * ## NOTE !! ## uncomment lins (31,35,38 and 40(inline)) to use it with blynk. ##
  */
 
