@@ -38,6 +38,6 @@ Technical drawings scale 1:1 or 1:2.
 
 <img src="https://raw.githubusercontent.com/S00189689/iot-Semester2/master/images/doc03048720190430095450(1)-page-006.jpg" height="auto" width="400" >
 
-#The final project finished Photo.
+# The final project finished Photo.
 
 <img src= "https://raw.githubusercontent.com/S00189689/iot-Semester2/master/images/Image-9.png" height=auto width="400" > 
