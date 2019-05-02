@@ -8,7 +8,7 @@ Steel Saft [Amazon link](https://www.amazon.co.uk/Metric-Silver-Steel-Round-Leng
 
 Belt kit [Amazon link](https://www.amazon.co.uk/KeeYees-Timing-Tensioner-Torsion-Printer/dp/B07JGXG7S2/ref=pd_day0_hl_328_4/261-9490537-7559249?_encoding=UTF8&pd_rd_i=B07JGXG7S2&pd_rd_r=30b581dc-4000-11e9-bd60-bf4de613e809&pd_rd_w=N9G5i&pd_rd_wg=lUnyi&pf_rd_p=92d624bb-a334-423e-8722-8024dd09667f&pf_rd_r=6FC6FRV30NXJFD94CXP3&psc=1&refRID=6FC6FRV30NXJFD94CXP3)
 
-Grove seed kit [Sseeed studio link](https://www.seeedstudio.com/starter-kits-c-919/Grove-Starter-kit-for-Arduino-Genuino-101-p-2664.html)
+Grove seed kit [Seeed studio link](https://www.seeedstudio.com/starter-kits-c-919/Grove-Starter-kit-for-Arduino-Genuino-101-p-2664.html)
 
 ARDUINO YUN REV 2 [Amazon link](https://www.amazon.co.uk/Arduino-Y%C3%BAn-rev2-USB-Microcontroller/dp/B07FRZ9QDB/ref=sr_1_1?keywords=Arduino+yun&qid=1556710668&s=gateway&sr=8-1)
 
