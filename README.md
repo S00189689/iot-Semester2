@@ -1,6 +1,8 @@
-# IoT-Semester2
-
-# Stuff you will need to do this project
+# Internet Of Things .
+# Arduino Project (Dog Hopper). 
+# [ITSligo.](https://www.itsligo.ie) Computing Year 1 Semester 2 
+# Using:<br>Arduino YUN , Arduino IDE.
+# Extra Libraries we used:<br>("[CheapStepper](https://github.com/tyhenry/CheapStepper)","[Blynk](https://blynk.io/)").
 
 Steel Saft [Amazon link](https://www.amazon.co.uk/Metric-Silver-Steel-Round-Lengths/dp/B01NCU7NSZ/ref=sr_1_1?s=industrial&ie=UTF8&qid=1551870679&sr=1-1&keywords=5mm+steel+shaft)
 
